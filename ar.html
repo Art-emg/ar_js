@@ -9,17 +9,17 @@
 
         <a-assets>
 
-            <a-asset-item id="animated-asset-ironman-obj" src='https://raw.githubusercontent.com/Art-emg/ar_js/master/models/IronMan.obj'></a-asset-item>
-
+            <a-asset-item id="animated-asset-ironman-obj" src='https://raw.githubusercontent.com/Art-emg/ar_js/master/models/DOMCEK.glb'></a-asset-item>
+<!-- 
             <a-asset-item id="animated-asset-ironman-mtl" src='https://raw.githubusercontent.com/Art-emg/ar_js/master/models/IronMan.mtl'></a-asset-item>
-       
+        -->
             <a-asset-item id="animated-asset-man" src='https://raw.githubusercontent.com/Art-emg/ar_js/master/models/CesiumMan.gltf'></a-asset-item>
 
         </a-assets>
 
 
         <a-marker id="animated-marker" type="pattern" preset="custom" url="https://raw.githubusercontent.com/Art-emg/ar_js/master/markers/pattern-A.patt">
-            <a-entity scale="0.005 0.005 0.005 ">  
+            <a-entity scale="0.2 0.2 0.2 ">  
                 <a-obj-model src="#animated-asset-ironman-obj" mtl="#animated-asset-ironman-mtl" ></a-obj-model>
             </a-entity>
         </a-marker>
