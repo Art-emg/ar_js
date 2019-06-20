@@ -8,22 +8,25 @@
     <a-scene embedded arjs=' debugUIEnabled: false;'>
 
         <a-assets>
-            <a-asset-item id="animated-asset" src='https://raw.githubusercontent.com/Art-emg/ar_js/master/models/DOMCEK.glb'></a-asset-item>
+            <a-asset-item id="animated-asset-domocek" src='https://raw.githubusercontent.com/Art-emg/ar_js/master/models/DOMCEK.obj'></a-asset-item>
+        </a-assets>        
+
+        <a-assets>
+            <a-asset-item id="animated-asset-man" src='https://raw.githubusercontent.com/Art-emg/ar_js/master/models/CesiumMan.gltf'></a-asset-item>
         </a-assets>
 
-        <a-marker id="animated-marker" type="pattern" preset="custom" url="https://raw.githubusercontent.com/Art-emg/ar_js/master/markers/pattern-teleg.patt">
-            <!-- <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box> -->
-            <a-entity gltf-model="#animated-asset" scale="0.2 0.2 0.2 ">
-                
+
+        <a-marker id="animated-marker" type="pattern" preset="custom" url="https://raw.githubusercontent.com/Art-emg/ar_js/master/markers/pattern-A.patt">
+            <a-entity scale="0.2 0.2 0.2 ">  
+                <a-obj-model src="#animated-asset-domocek" ></a-obj-model>
             </a-entity>
         </a-marker>
 
+
         <a-marker id="animated-marker" type="pattern" preset="custom" url="https://raw.githubusercontent.com/Art-emg/ar_js/master/markers/a.patt">
-            <!-- <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box> -->
-            <a-entity gltf-model="#animated-asset" scale="0.2 0.2 0.2 ">
-                
-            </a-entity>
+            <a-entity gltf-model="#animated-asset-man" scale="0.7 0.7 0.7"></a-entity>
         </a-marker>
+
         <a-entity  camera></a-entity>
 
   </a-scene>
