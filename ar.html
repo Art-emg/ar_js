@@ -1,0 +1,37 @@
+<!doctype HTML>
+<html>
+<script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
+<script src="https://raw.githack.com/jeromeetienne/AR.js/1.7.1/aframe/build/aframe-ar.js"></script>
+
+<body style='margin : 0px; overflow: hidden;'>
+
+    <a-scene embedded arjs=' debugUIEnabled: false;'>
+
+        <a-assets>
+
+            <a-asset-item id="animated-asset-ironman-obj" src='https://raw.githubusercontent.com/Art-emg/ar_js/master/models/IronMan.obj'></a-asset-item>
+
+            <a-asset-item id="animated-asset-ironman-mtl" src='https://raw.githubusercontent.com/Art-emg/ar_js/master/models/IronMan.mtl'></a-asset-item>
+       
+            <a-asset-item id="animated-asset-man" src='https://raw.githubusercontent.com/Art-emg/ar_js/master/models/CesiumMan.gltf'></a-asset-item>
+
+        </a-assets>
+
+
+        <a-marker id="animated-marker" type="pattern" preset="custom" url="https://raw.githubusercontent.com/Art-emg/ar_js/master/markers/pattern-A.patt">
+            <a-entity scale="0.005 0.005 0.005 ">  
+                <a-obj-model src="#animated-asset-ironman-obj" mtl="#animated-asset-ironman-mtl" ></a-obj-model>
+            </a-entity>
+        </a-marker>
+
+
+        <a-marker id="animated-marker" type="pattern" preset="custom" url="https://raw.githubusercontent.com/Art-emg/ar_js/master/markers/a.patt">
+            <a-entity gltf-model="#animated-asset-man" scale="0.7 0.7 0.7"></a-entity>
+        </a-marker>
+
+        <a-entity  camera></a-entity>
+
+  </a-scene>
+</body>
+
+</html>

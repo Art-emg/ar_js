@@ -1,35 +1,51 @@
-<!doctype HTML>
+<!DOCTYPE html>
 <html>
-<script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
-<script src="https://raw.githack.com/jeromeetienne/AR.js/1.7.1/aframe/build/aframe-ar.js"></script>
+	<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-<body style='margin : 0px; overflow: hidden;'>
+	<style type="text/css">
+body {background: #d6eaf8}
+a {
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  color: white;
+  padding: 20px 30px;
+  margin: 10px 20px;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0,0,0,.1);
+  transition: .5s;
+}
+a:hover {background-position: right center;}
+	</style>
 
-    <a-scene embedded arjs=' debugUIEnabled: false;'>
+	</head>
+	<body>
+	
+				<div align="center"  style="margin: 30px ; margin-top: 15%">
+					<a href="ar.html">Перейти к сцене</a>
+				</div>
 
-        <a-assets>
-            <a-asset-item id="animated-asset-domocek" src='https://raw.githubusercontent.com/Art-emg/ar_js/master/models/DOMCEK.obj'></a-asset-item>
-        </a-assets>        
+		
 
-        <a-assets>
-            <a-asset-item id="animated-asset-man" src='https://raw.githubusercontent.com/Art-emg/ar_js/master/models/CesiumMan.gltf'></a-asset-item>
-        </a-assets>
-
-
-        <a-marker id="animated-marker" type="pattern" preset="custom" url="https://raw.githubusercontent.com/Art-emg/ar_js/master/markers/pattern-A.patt">
-            <a-entity scale="0.2 0.2 0.2 ">  
-                <a-obj-model src="#animated-asset-domocek" ></a-obj-model>
-            </a-entity>
-        </a-marker>
+<!-- Диалоговый модуль -->
 
 
-        <a-marker id="animated-marker" type="pattern" preset="custom" url="https://raw.githubusercontent.com/Art-emg/ar_js/master/markers/a.patt">
-            <a-entity gltf-model="#animated-asset-man" scale="0.7 0.7 0.7"></a-entity>
-        </a-marker>
 
-        <a-entity  camera></a-entity>
+		<!-- Конец модуля -->
 
-  </a-scene>
-</body>
+
+
+	
+
+	</body>
+
 
 </html>
