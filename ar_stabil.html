@@ -53,23 +53,25 @@
         <a-assets>
 
             <a-asset-item id="animated-asset-dom" src='https://raw.githubusercontent.com/Art-emg/ar_js/master/models/lalalvya.gltf'></a-asset-item>
-<!-- 
-            <a-asset-item id="animated-asset-ironman-mtl" src='https://raw.githubusercontent.com/Art-emg/ar_js/master/models/IronMan.mtl'></a-asset-item>
-        -->
+ 
+            <a-asset-item id="animated-asset-8" src='https://raw.githubusercontent.com/Art-emg/ar_js/master/models/super8.dae'></a-asset-item>
+
             <a-asset-item id="animated-asset-man" src='https://raw.githubusercontent.com/Art-emg/ar_js/master/models/lalalvya.gltf'></a-asset-item>
 
         </a-assets>
 
 
         <a-marker id="animated-marker" type="pattern" preset="custom" url="https://raw.githubusercontent.com/Art-emg/ar_js/master/markers/pattern-A.patt">
-            <a-entity gltf-model="#animated-asset-dom" scale="0.0002 0.0002 0.0002 ">  
-               <!--  <a-obj-model src="#animated-asset-ironman-obj" mtl="#animated-asset-ironman-mtl" ></a-obj-model> -->
-            </a-entity>
+            <a-entity gltf-model="#animated-asset-dom" scale="0.0002 0.0002 0.0002 "> </a-entity>
         </a-marker>
 
 
         <a-marker id="animated-marker" type="pattern" preset="custom" url="https://raw.githubusercontent.com/Art-emg/ar_js/master/markers/a.patt">
             <a-entity gltf-model="#animated-asset-man" scale="0.0007 0.0007 0.0007"></a-entity>
+        </a-marker>
+
+        <a-marker preset='hiro'>
+            <a-entity collada-model="#animated-asset-8" scale="0.001 0.001 0.001"></a-entity>
         </a-marker>
 
         <a-entity  camera></a-entity>
