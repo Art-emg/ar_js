@@ -52,11 +52,11 @@
 
         <a-assets>
 
-            <a-asset-item id="animated-asset-dom" src='https://raw.githubusercontent.com/Art-emg/ar_js/master/models/lalalvya.gltf'></a-asset-item>
+            <a-asset-item id="animated-asset-dom" src='https://raw.githubusercontent.com/Art-emg/ar_js/master/models/super8.dae'></a-asset-item>
  
             <a-asset-item id="animated-asset-8" src='https://raw.githubusercontent.com/Art-emg/ar_js/master/models/super8.dae'></a-asset-item>
 
-            <a-asset-item id="animated-asset-man" src='https://raw.githubusercontent.com/Art-emg/ar_js/master/models/lalalvya.gltf'></a-asset-item>
+            <a-asset-item id="animated-asset-man" src='https://raw.githubusercontent.com/Art-emg/ar_js/master/models/super8.dae'></a-asset-item>
 
         </a-assets>
 
@@ -71,7 +71,10 @@
         </a-marker>
 
         <a-marker preset='hiro'>
-            <a-entity collada-model="#animated-asset-8" scale="0.001 0.001 0.001"></a-entity>
+            <a-entity>
+					<a-collada-model src="#animated-asset-8" scale="0.05 0.05 0.05" visible="false">
+					</a-collada-model>
+			</a-entity>
         </a-marker>
 
         <a-entity  camera></a-entity>
